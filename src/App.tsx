@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom"
 
-import Layout from "components/Layout/Layout"
+import Layout from "./components/Layout/Layout"
 
-import { PagesPaths } from "components/Layout/types"
+import { PagesPaths } from "./components/Layout/types"
 
 function App() {
   return (
