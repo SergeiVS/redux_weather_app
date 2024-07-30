@@ -1,19 +1,19 @@
-import GlobalStyles from "styles/GlobalStyles"
+import { Route, Routes } from "react-router-dom"
+
+import Layout from "components/Layout/Layout"
+
+import { PagesPaths } from "components/Layout/types"
 
 function App() {
   return (
     <>
-      {/* <Layout_Team_1>
+      <Layout>
         <Routes>
           <Route path={PagesPaths.HOME}></Route>
-          <Route
-            path={PagesPaths.CREATE_EMPLOYEES}
-            element={<CreateEmployee />}
-          />
-          <Route path={PagesPaths.EMPLOYEES} element={<Employees />} />
+          <Route path={PagesPaths.WEATHERS}></Route>
           <Route path="*" element="Page not found" />
         </Routes>
-      </Layout_Team_1> */}
+      </Layout>
     </>
   )
 }
