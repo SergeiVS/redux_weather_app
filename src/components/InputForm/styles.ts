@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 
-export const InputFormContainer = styled.div`
+export const InputFormContainer = styled.form`
 display: flex;
 width: 710px;
 gap: 14px;
