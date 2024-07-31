@@ -20,8 +20,9 @@ function InputForm() {
     validationSchema: validationSchema,
     validateOnMount: false,
     validateOnChange: false,
-    onSubmit: values => {
+    onSubmit: (values, helpers) => {
       dispatch(weatherAction.getWeather(values[FormNames.CITY]))
+      helpers.resetForm()
     },
   })
 
