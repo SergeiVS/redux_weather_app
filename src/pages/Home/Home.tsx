@@ -3,7 +3,7 @@ import WeatherCard from "components/WeatherCard/WeatherCard"
 
 function Home() {
     return <PageWrapper>
-      <WeatherCard />
+      {/* <WeatherCard /> */}
   </PageWrapper>
 }
 

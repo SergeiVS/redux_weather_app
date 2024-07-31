@@ -6,3 +6,7 @@ export const PageWrapper = styled.div`
   flex: 1;
   align-items: center;
 `
+export const DeleteButtonControl = styled.div`
+ width: 709px;
+ min-height: 48px;
+`
