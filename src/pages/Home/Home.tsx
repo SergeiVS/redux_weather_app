@@ -13,12 +13,14 @@ function Home() {
   const { currentWeatherData, error } = useAppSelector(
     weatherSelectors.weatherState,
   )
+
   const [isModalOpen, setModalOpen] = useState<boolean>(false)
   useEffect(() => {
     if (error) {
       setModalOpen(true)
     }
   }, [error])
+
   return (
     <PageWrapper>
       <InputForm />
