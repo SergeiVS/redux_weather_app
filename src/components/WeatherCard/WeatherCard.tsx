@@ -25,7 +25,7 @@ function WeatherCard(weatherData: WeatherDataProps) {
           <Degrees>{temperature}°</Degrees>
           <City>{weatherData.weatherData.city}</City>
         </ResultContainer>
-        <WeatherPicture src="URL_PICTURE"></WeatherPicture>
+        <WeatherPicture src={URL_PICTURE}></WeatherPicture>
       </ResponseContainer>
       <ButtonsContainer>
         <Button name="Save" isTransparent />
