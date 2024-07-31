@@ -12,6 +12,8 @@ const getButtonColor = (
 ) => {
   if ($isTransparent) {
     return colors.TRANSPARENT
+  } else if (disbled) {
+    return colors.DISABLED
   } else {
     return colors.BUTTON_BLUE
   }
