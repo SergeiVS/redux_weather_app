@@ -4,6 +4,7 @@ import { v4 } from "uuid"
 
 import { WeatherAppSliceState, WeatherObject } from "./types"
 import axios from "axios"
+import { Alert } from "@mui/material"
 
 const appWeatherInitialState: WeatherAppSliceState = {
   currentWeatherData: undefined,

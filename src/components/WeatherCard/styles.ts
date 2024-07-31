@@ -3,10 +3,13 @@ import styled from "@emotion/styled"
 import { colors } from "styles/colors"
 
 export const WeatherCardContainer = styled.div`
+display: flex;
+flex-direction: column;
   width: 709px;
   height: 220px;
   border-radius: 40px;
   padding: 36px;
+  gap: 20px;
   outline: none;
   background: ${colors.WEATHER_CARD_BACKGROUND};
   font-family: Arial, Helvetica, sans-serif;
@@ -16,6 +19,7 @@ export const WeatherCardContainer = styled.div`
 export const ResponseContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  padding-right: 150px;
 `
 
 export const ResultContainer = styled.div``

@@ -13,7 +13,6 @@ function App() {
         <Routes>
           <Route path={PagesPaths.HOME} element={<Home />}></Route>
           <Route path={PagesPaths.WEATHERS} element={<Weathers />}></Route>
-          <Route path="*" element="Page not found" />
         </Routes>
       </Layout>
     </>

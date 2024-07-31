@@ -46,7 +46,9 @@ function WeatherCard(weatherData: WeatherDataProps) {
         <WeatherPicture src={URL_PICTURE}></WeatherPicture>
       </ResponseContainer>
       <ButtonsContainer>
-        <Button name="Save" isTransparent onClick={onSave} />
+        {!weatherData.isSaved && (
+          <Button name="Save" isTransparent onClick={onSave} />
+        )}
         <Button name="Delete" isTransparent onClick={onDelete} />
       </ButtonsContainer>
     </WeatherCardContainer>

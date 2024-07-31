@@ -17,5 +17,5 @@ export const colors: COLORS = {
   PLACEHOLDER: "#6f6f6f",
   LABEL: "#615c5c",
   DISABLED: "#3f3f3f",
-  WEATHER_CARD_BACKGROUND: "rgba(47, 72, 111, 0.4)",
+  WEATHER_CARD_BACKGROUND: "rgba(47, 72, 111, 0.5)",
 }
