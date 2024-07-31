@@ -31,6 +31,7 @@ function InputForm() {
         name={FormNames.CITY}
         placeholder="Colrado"
         value={formik.values[FormNames.CITY]}
+        onChange={formik.handleChange}
       />
       <ButtonContainer>
         <Button name="Search" type="submit" />
