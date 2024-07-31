@@ -16,6 +16,7 @@ import {
 } from "./styles"
 import { WeatherDataProps } from "./types"
 
+
 function WeatherCard(weatherData: WeatherDataProps) {
   const dispatch = useAppDispatch()
   const temperature: number = Math.round(
@@ -29,8 +30,10 @@ function WeatherCard(weatherData: WeatherDataProps) {
 
   const onDelete = () => {
     dispatch(weatherAction.deleteWeatherCard(weatherData.weatherData.id))
-    alert("Weather card was deleted")
+    setTimeout(() => alert("Weather card was deleted"), 500)
+    
   }
+
   const URL_PICTURE = `http://openweathermap.org/img/w/${weatherData.weatherData.iconCode}.png`
 
   return (
