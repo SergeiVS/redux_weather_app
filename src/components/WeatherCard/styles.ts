@@ -19,6 +19,7 @@ export const ResponseContainer = styled.div`
 `
 
 export const ResultContainer = styled.div``
+
 export const Degrees = styled.p`
   font-size: 57px;
   font-weight: bold;
