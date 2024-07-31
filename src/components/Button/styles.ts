@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 
-import { colors } from "../../src/styles/colors"
+import { colors } from "styles/colors"
 
 interface StyledButtonProps {
   $isTransparent?: boolean
