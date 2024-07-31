@@ -1,7 +1,7 @@
-
+import { PageWrapper } from "./styles"
 
 function Weathers() {
-  return
+  return <PageWrapper>Weathers</PageWrapper>
 }
 
 export default Weathers

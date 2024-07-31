@@ -6,23 +6,25 @@ import {
   NavigationContainer,
   Main,
   Logo,
+  LogoName,
   Link,
 } from "./styles"
 
 import { LayoutProps } from "./types";
+import { PagesPaths } from "./types";
 
 function Layout({ children }: LayoutProps) {
   const navigate = useNavigate();
 
   const goToHomePage = () => {
-    navigate("/");
+    navigate(PagesPaths.HOME);
   };
 
   return (
     <LayoutWrapper>
       <Header>
         <Logo onClick={goToHomePage}>
-          Weather App
+          <LogoName>Weather App</LogoName>
         </Logo>
         <NavigationContainer>
           <Link
@@ -30,7 +32,7 @@ function Layout({ children }: LayoutProps) {
               fontWeight: isActive ? "bold" : "normal",
               textDecoration: isActive ? "underline" : "none",
             })}
-            to="/"
+            to={PagesPaths.HOME}
           >
             Home
           </Link>
@@ -39,36 +41,9 @@ function Layout({ children }: LayoutProps) {
               fontWeight: isActive ? "bold" : "normal",
               textDecoration: isActive ? "underline" : "none",
             })}
-            to="/clients"
+            to={PagesPaths.WEATHERS}
           >
-            Clients
-          </Link>
-          <Link
-            style={({ isActive }) => ({
-              fontWeight: isActive ? "bold" : "normal",
-              textDecoration: isActive ? "underline" : "none",
-            })}
-            to="/contactUs"
-          >
-            Contact Us
-          </Link>
-          <Link
-            style={({ isActive }) => ({
-              fontWeight: isActive ? "bold" : "normal",
-              textDecoration: isActive ? "underline" : "none",
-            })}
-            to="/about"
-          >
-            About
-          </Link>
-          <Link
-            style={({ isActive }) => ({
-              fontWeight: isActive ? "bold" : "normal",
-              textDecoration: isActive ? "underline" : "none",
-            })}
-            to="/login"
-          >
-            Log In
+            Weathers
           </Link>
         </NavigationContainer>
       </Header>

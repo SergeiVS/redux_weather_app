@@ -1,7 +1,7 @@
-
+import { PageWrapper } from "./styles"
 
 function Home() {
-    return 
+  return <PageWrapper>Home page</PageWrapper>
 }
 
-export default Home;
+export default Home
