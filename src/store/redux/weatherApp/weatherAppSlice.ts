@@ -56,6 +56,7 @@ export const weatherAppSlice = createAppSlice({
     ),
     deleteWeatherCard: create.reducer(
       (state: WeatherAppSliceState, action: PayloadAction<string>) => {
+        state.currentWeatherData = undefined
         state.weather = state.weather.filter((weaterCard: WeatherObject) => {
           return weaterCard.id !== action.payload
         })
