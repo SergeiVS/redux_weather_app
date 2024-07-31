@@ -32,8 +32,9 @@ function InputForm() {
       <Input
         id="city"
         name={FormNames.CITY}
-        placeholder="Colrado"
+        placeholder="Colorado"
         value={formik.values[FormNames.CITY]}
+        onChange={formik.handleChange}
       />
       <ButtonContainer>
         <Button name="Search" type="submit" disabled={isPending} />
