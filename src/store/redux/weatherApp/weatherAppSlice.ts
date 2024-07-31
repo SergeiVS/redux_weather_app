@@ -17,10 +17,10 @@ export const weatherAppSlice = createAppSlice({
   initialState: appWeatherInitialState,
   reducers: create => ({
     getWeather: create.asyncThunk(
-      async (sityName: string) => {
+      async (cityName: string) => {
         const APP_ID = "73a6b6af307bc742012b18f99bc9df73"
         const response = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${sityName}&appid=${APP_ID}`,
+          `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APP_ID}`,
         )
         return response
       },
