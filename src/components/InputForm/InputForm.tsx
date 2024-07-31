@@ -4,8 +4,9 @@ import Button from "components/Button/Button"
 import * as Yup from "yup"
 import { FormNames } from "./types"
 import { useFormik } from "formik"
-import { useAppDispatch } from "store/hooks"
+import { useAppDispatch, useAppSelector } from "store/hooks"
 import { weatherAction } from "store/redux/weatherApp/weatherAppSlice"
+import { weatherSelectors } from "store/redux/weatherApp/weatherAppSlice"
 
 function InputForm() {
   const dispatch = useAppDispatch()
@@ -24,6 +25,8 @@ function InputForm() {
     },
   })
 
+  const { isPending } = useAppSelector(weatherSelectors.weatherState)
+
   return (
     <InputFormContainer onSubmit={formik.handleSubmit}>
       <Input
@@ -34,7 +37,7 @@ function InputForm() {
         onChange={formik.handleChange}
       />
       <ButtonContainer>
-        <Button name="Search" type="submit" />
+        <Button name="Search" type="submit" disabled={isPending} />
       </ButtonContainer>
     </InputFormContainer>
   )
