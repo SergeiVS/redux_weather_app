@@ -12,11 +12,11 @@ import WeatherCard from "components/WeatherCard/WeatherCard"
 
 function Weathers() {
   const dispatch = useAppDispatch()
-  const { } = useAppSelector(
+  const {weather} = useAppSelector(
   weatherSelectors.weatherState,
   )
   
- 
+  const weatherCards = weather.map((weatherObject: WeatherObject) => <WeatherCard weatherData={weatherObject} isSaved={true} />)
 
   const deleteAllCards = () => {
     dispatch(weatherAction.deleteAllCards())
@@ -24,14 +24,14 @@ function Weathers() {
 
   return (
     <PageWrapper>
-      {/* {weatherCards.length > 0 && ()} */}
-      <DeleteButtonControl>
+      {weatherCards}
+      {weather.length > 0 && (<DeleteButtonControl>
         <Button
           name="Delete all cards"
           onClick={deleteAllCards}
           isTransparent={false}
         />
-      </DeleteButtonControl>
+      </DeleteButtonControl>)}
     </PageWrapper>
   )
 }
