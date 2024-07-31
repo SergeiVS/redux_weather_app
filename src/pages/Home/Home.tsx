@@ -1,7 +1,10 @@
 import { PageWrapper } from "./styles"
+import WeatherCard from "components/WeatherCard/WeatherCard"
 
 function Home() {
-  return <PageWrapper>Home page</PageWrapper>
+    return <PageWrapper>
+      <WeatherCard />
+  </PageWrapper>
 }
 
 export default Home
