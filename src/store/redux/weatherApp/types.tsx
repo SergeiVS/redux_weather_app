@@ -1,6 +1,8 @@
 export interface WeatherAppSliceState {
+  currentWeatherData: WeatherObject | undefined
   weather: WeatherObject[]
   error: string | undefined
+  isPending: boolean
 }
 
 export interface WeatherObject {
@@ -9,3 +11,4 @@ export interface WeatherObject {
   iconCode: string
   city: string
 }
+
