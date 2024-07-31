@@ -10,9 +10,6 @@ import { Alert } from "@mui/material"
 import { PageWrapper } from "./styles"
 
 function Home() {
-<<<<<<< HEAD
-  return <PageWrapper>{/* <WeatherCard /> */}</PageWrapper>
-=======
   const { currentWeatherData, error } = useAppSelector(
     weatherSelectors.weatherState,
   )
@@ -33,7 +30,6 @@ function Home() {
       </Modal>
     </PageWrapper>
   )
->>>>>>> f3c1dd609b43f9f632ac8c26e8dc4af0fc4ed80c
 }
 
 export default Home
