@@ -28,7 +28,7 @@ function Home() {
         <WeatherCard weatherData={currentWeatherData} isSaved={false} />
       )}
       <Modal open={isModalOpen} onClose={() => setModalOpen(false)}>
-        <Alert severity="error">Employee added.</Alert>
+        <Alert severity="error">{error}</Alert>
       </Modal>
     </PageWrapper>
   )
