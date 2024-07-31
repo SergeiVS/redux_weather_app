@@ -37,7 +37,12 @@ export const StyledButton = styled("button")<StyledButtonProps>`
   background-color: ${({ disabled, $isTransparent }) =>
     getButtonColor(disabled, $isTransparent)};
 
-  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: gray;
+  }
 `
 
 export const ButtonImg = styled("img")`
