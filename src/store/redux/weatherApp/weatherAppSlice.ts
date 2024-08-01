@@ -4,6 +4,7 @@ import { v4 } from "uuid"
 
 import { WeatherAppSliceState, WeatherObject } from "./types"
 import axios from "axios"
+import { Alert } from "@mui/material"
 
 const appWeatherInitialState: WeatherAppSliceState = {
   currentWeatherData: undefined,
@@ -17,10 +18,10 @@ export const weatherAppSlice = createAppSlice({
   initialState: appWeatherInitialState,
   reducers: create => ({
     getWeather: create.asyncThunk(
-      async (sityName: string) => {
+      async (cityName: string) => {
         const APP_ID = "73a6b6af307bc742012b18f99bc9df73"
         const response = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${sityName}&appid=${APP_ID}`,
+          `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APP_ID}`,
         )
         return response
       },
@@ -56,6 +57,7 @@ export const weatherAppSlice = createAppSlice({
     ),
     deleteWeatherCard: create.reducer(
       (state: WeatherAppSliceState, action: PayloadAction<string>) => {
+        state.currentWeatherData = undefined
         state.weather = state.weather.filter((weaterCard: WeatherObject) => {
           return weaterCard.id !== action.payload
         })

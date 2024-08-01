@@ -5,4 +5,5 @@ export const PageWrapper = styled.div`
   flex-direction: column;
   flex: 1;
   align-items: center;
+  gap: 120px;
 `
