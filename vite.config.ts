@@ -14,7 +14,7 @@ export default defineConfig({
     },
   },
   plugins: [react()],
-  base: "/redux_weather_app",
+  base: "/home",
   server: {
     open: true,
   },
