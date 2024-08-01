@@ -27,8 +27,8 @@ export const ErrorContainer = styled.div`
   padding-left: 20px;
 `
 
-export const InputWrapper= styled.div`
-display: flex; 
-flex-direction: column;
- gap: 5px;
+export const InputWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 `

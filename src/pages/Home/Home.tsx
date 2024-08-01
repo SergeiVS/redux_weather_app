@@ -1,11 +1,11 @@
 import { useAppSelector } from "store/hooks"
 import { weatherSelectors } from "store/redux/weatherApp/weatherAppSlice"
 import { useEffect, useState } from "react"
+import { Alert } from "@mui/material"
 
 import WeatherCard from "components/WeatherCard/WeatherCard"
 import InputForm from "components/InputForm/InputForm"
 import Modal from "components/Modal/Modal"
-import { Alert } from "@mui/material"
 
 import { PageWrapper } from "./styles"
 

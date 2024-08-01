@@ -1,14 +1,10 @@
 import { useAppDispatch, useAppSelector } from "store/hooks"
-import { useEffect } from "react"
-import { v4 } from "uuid"
-
 import { weatherAction, weatherSelectors } from "store/redux/weatherApp/weatherAppSlice"
 import { WeatherObject } from "store/redux/weatherApp/types"
-
-import { PageWrapper, DeleteButtonControl } from "./styles"
-
 import Button from "components/Button/Button"
 import WeatherCard from "components/WeatherCard/WeatherCard"
+
+import { PageWrapper, DeleteButtonControl } from "./styles"
 
 function Weathers() {
   const dispatch = useAppDispatch()

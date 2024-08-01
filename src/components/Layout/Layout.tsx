@@ -10,8 +10,7 @@ import {
   Link,
 } from "./styles"
 
-import { LayoutProps } from "./types";
-import { PagesPaths } from "./types";
+import { LayoutProps, PagesPaths } from "./types";
 
 function Layout({ children }: LayoutProps) {
   const navigate = useNavigate();
