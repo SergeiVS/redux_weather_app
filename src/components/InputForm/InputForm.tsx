@@ -22,7 +22,7 @@ function InputForm() {
   const formik = useFormik({
     initialValues: { [FormNames.CITY]: "" },
     validationSchema: validationSchema,
-    validateOnMount: false,
+    validateOnMount: true,
     validateOnChange: false,
     onSubmit: (values, helpers) => {
       dispatch(weatherAction.getWeather(values[FormNames.CITY]))
