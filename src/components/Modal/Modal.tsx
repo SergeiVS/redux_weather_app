@@ -1,5 +1,5 @@
-import { StyledModalWrapper } from "./styles";
-import { ModalProps } from "./types";
+import { StyledModalWrapper } from "./styles"
+import { ModalProps } from "./types"
 
 function Modal({ open, onClose, children }: ModalProps) {
   return (
@@ -8,7 +8,7 @@ function Modal({ open, onClose, children }: ModalProps) {
         {children}
       </StyledModalWrapper>
     </>
-  );
+  )
 }
 
-export default Modal;
+export default Modal

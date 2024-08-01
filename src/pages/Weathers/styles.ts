@@ -8,6 +8,6 @@ export const PageWrapper = styled.div`
   gap: 120px;
 `
 export const DeleteButtonControl = styled.div`
- width: 709px;
- min-height: 48px;
+  width: 709px;
+  min-height: 48px;
 `

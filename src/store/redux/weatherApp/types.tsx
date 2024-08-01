@@ -11,4 +11,3 @@ export interface WeatherObject {
   iconCode: string
   city: string
 }
-
