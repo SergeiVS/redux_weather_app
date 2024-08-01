@@ -28,7 +28,6 @@ function Layout({ children }: LayoutProps) {
         <NavigationContainer>
           <Link
             style={({ isActive }) => ({
-              fontWeight: isActive ? "bold" : "normal",
               textDecoration: isActive ? "underline" : "none",
             })}
             to={PagesPaths.HOME}
@@ -37,7 +36,6 @@ function Layout({ children }: LayoutProps) {
           </Link>
           <Link
             style={({ isActive }) => ({
-              fontWeight: isActive ? "bold" : "normal",
               textDecoration: isActive ? "underline" : "none",
             })}
             to={PagesPaths.WEATHERS}
