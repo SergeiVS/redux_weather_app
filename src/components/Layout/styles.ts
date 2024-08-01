@@ -8,6 +8,7 @@ export const LayoutWrapper = styled.div`
   flex-direction: column;
   flex: 1;
   background-image: url(${backgroundImage});
+  background-attachment: fixed;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 `
 
@@ -58,4 +59,4 @@ export const Main = styled.main`
   flex-direction: column;
   flex: 1;
   padding: 40px;
-`;
+`

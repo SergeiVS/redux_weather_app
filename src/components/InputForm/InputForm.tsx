@@ -1,6 +1,10 @@
+import { Alert } from "@mui/material"
+import { useState, useEffect } from "react"
 import Input from "components/Input/Input"
 import { ButtonContainer, InputControlForm, InputFormContainer } from "./styles"
 import Button from "components/Button/Button"
+import Modal from "components/Modal/Modal"
+
 import * as Yup from "yup"
 import { FormNames } from "./types"
 import { useFormik } from "formik"
@@ -18,10 +22,11 @@ function InputForm() {
   const formik = useFormik({
     initialValues: { [FormNames.CITY]: "" },
     validationSchema: validationSchema,
-    validateOnMount: false,
+    validateOnMount: true,
     validateOnChange: false,
-    onSubmit: values => {
+    onSubmit: (values, helpers) => {
       dispatch(weatherAction.getWeather(values[FormNames.CITY]))
+      helpers.resetForm
     },
   })
 

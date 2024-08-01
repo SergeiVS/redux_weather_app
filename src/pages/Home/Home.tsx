@@ -15,9 +15,12 @@ function Home() {
   )
 
   const [isModalOpen, setModalOpen] = useState<boolean>(false)
+  const [errorMessage, setErrorMessage] = useState("")
+
   useEffect(() => {
     if (error) {
       setModalOpen(true)
+      setErrorMessage(error)
     }
   }, [error])
 
@@ -28,7 +31,7 @@ function Home() {
         <WeatherCard weatherData={currentWeatherData} isSaved={false} />
       )}
       <Modal open={isModalOpen} onClose={() => setModalOpen(false)}>
-        <Alert severity="error">{error}</Alert>
+        <Alert severity="error">{errorMessage}</Alert>
       </Modal>
     </PageWrapper>
   )

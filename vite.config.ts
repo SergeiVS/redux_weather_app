@@ -14,6 +14,7 @@ export default defineConfig({
     },
   },
   plugins: [react()],
+  base: "/home",
   server: {
     open: true,
   },
