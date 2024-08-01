@@ -1,16 +1,14 @@
-import { Alert } from "@mui/material"
-import { useState, useEffect } from "react"
-import Input from "components/Input/Input"
-import { ButtonContainer, InputControlForm, InputFormContainer } from "./styles"
-import Button from "components/Button/Button"
-import Modal from "components/Modal/Modal"
-
 import * as Yup from "yup"
-import { FormNames } from "./types"
 import { useFormik } from "formik"
+
 import { useAppDispatch, useAppSelector } from "store/hooks"
 import { weatherAction } from "store/redux/weatherApp/weatherAppSlice"
 import { weatherSelectors } from "store/redux/weatherApp/weatherAppSlice"
+import Input from "components/Input/Input"
+import Button from "components/Button/Button"
+
+import { ButtonContainer, InputControlForm, InputFormContainer } from "./styles"
+import { FormNames } from "./types"
 
 function InputForm() {
   const dispatch = useAppDispatch()
