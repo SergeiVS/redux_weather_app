@@ -1,10 +1,9 @@
 import { createAppSlice } from "store/createAppSlice"
 import { PayloadAction } from "@reduxjs/toolkit"
 import { v4 } from "uuid"
+import axios from "axios"
 
 import { WeatherAppSliceState, WeatherObject } from "./types"
-import axios from "axios"
-import { Alert } from "@mui/material"
 
 const appWeatherInitialState: WeatherAppSliceState = {
   currentWeatherData: undefined,

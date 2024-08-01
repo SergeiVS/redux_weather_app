@@ -1,5 +1,4 @@
 import { StyledButton, ButtonImg } from "./styles";
-
 import { ButtonProps } from "./types";
 
 function Button({
