@@ -1,6 +1,7 @@
 {
   "name": "vite-template-redux",
   "private": true,
+  "homepage": "https://sergeivs.github.io/redux_weather_app/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
