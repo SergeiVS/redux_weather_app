@@ -1,5 +1,5 @@
 import Input from "components/Input/Input"
-import { ButtonContainer, InputFormContainer } from "./styles"
+import { ButtonContainer, InputControlForm, InputFormContainer } from "./styles"
 import Button from "components/Button/Button"
 import * as Yup from "yup"
 import { FormNames } from "./types"
@@ -29,13 +29,16 @@ function InputForm() {
 
   return (
     <InputFormContainer onSubmit={formik.handleSubmit}>
-      <Input
-        id="city"
-        name={FormNames.CITY}
-        placeholder="Colorado"
-        value={formik.values[FormNames.CITY]}
-        onChange={formik.handleChange}
-      />
+      <InputControlForm>
+        <Input
+          id="city"
+          name={FormNames.CITY}
+          placeholder="Colorado"
+          value={formik.values[FormNames.CITY]}
+          onChange={formik.handleChange}
+          error={formik.errors[FormNames.CITY]}
+        />
+      </InputControlForm>
       <ButtonContainer>
         <Button name="Search" type="submit" disabled={isPending} />
       </ButtonContainer>

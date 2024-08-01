@@ -1,5 +1,5 @@
 import { InputProps } from "./types"
-import { StyledInput, ErrorContainer } from "./styles"
+import { StyledInput, ErrorContainer, InputWrapper } from "./styles"
 
 function Input({
   id,
@@ -12,7 +12,7 @@ function Input({
   onChange,
 }: InputProps) {
   return (
-    <>
+    <InputWrapper>
       <StyledInput
         disabled={disabled}
         id={id}
@@ -20,13 +20,11 @@ function Input({
         type={type}
         placeholder={placeholder}
         $error={error}
-        // value - это значение самого инпута, т.е то значение котрое введет потенциальный пользователь
         value={value}
-        // onChange - функция, которая срабатывает, когда пользователь что-то вводит в инпут
         onChange={onChange}
       />
       {!!error && <ErrorContainer>{error}</ErrorContainer>}
-    </>
+    </InputWrapper>
   )
 }
 

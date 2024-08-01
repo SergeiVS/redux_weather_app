@@ -24,4 +24,11 @@ export const StyledInput = styled.input<StyledInputProps>`
 export const ErrorContainer = styled.div`
   color: ${colors.ERROR};
   font-size: 18px;
+  padding-left: 20px;
+`
+
+export const InputWrapper= styled.div`
+display: flex; 
+flex-direction: column;
+ gap: 5px;
 `
