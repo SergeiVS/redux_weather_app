@@ -2,6 +2,8 @@
   "name": "vite-template-redux",
   "private": true,
   "homepage": "https://sergeivs.github.io/redux_weather_app/",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
