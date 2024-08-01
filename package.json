@@ -6,13 +6,9 @@
   "scripts": {
     "dev": "vite",
     "start": "vite",
-<<<<<<< HEAD
-    "build": "vite build",
-=======
     "build": "tsc && vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
->>>>>>> 6043b8739b1dcee096e5eacabd28867b75bdcab4
     "preview": "vite preview",
     "test": "vitest run",
     "format": "prettier --write .",
