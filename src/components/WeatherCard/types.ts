@@ -1,6 +1,6 @@
-import { WeatherObject } from "store/redux/weatherApp/types";
+import { WeatherObject } from "store/redux/weatherApp/types"
 
 export interface WeatherDataProps {
-    weatherData: WeatherObject
-    isSaved: boolean
+  weatherData: WeatherObject
+  isSaved: boolean
 }

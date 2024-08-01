@@ -10,14 +10,14 @@ import {
   Link,
 } from "./styles"
 
-import { LayoutProps, PagesPaths } from "./types";
+import { LayoutProps, PagesPaths } from "./types"
 
 function Layout({ children }: LayoutProps) {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   const goToHomePage = () => {
-    navigate(PagesPaths.HOME);
-  };
+    navigate(PagesPaths.HOME)
+  }
 
   return (
     <LayoutWrapper>

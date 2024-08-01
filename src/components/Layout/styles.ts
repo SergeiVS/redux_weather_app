@@ -9,7 +9,7 @@ export const LayoutWrapper = styled.div`
   flex: 1;
   background-image: url(${backgroundImage});
   background-attachment: fixed;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 `
 
 export const Header = styled.div`
@@ -52,7 +52,7 @@ export const Link = styled(NavLink)`
   font-size: 20px;
   font-weight: normal;
   text-decoration: none;
-`;
+`
 
 export const Main = styled.main`
   display: flex;

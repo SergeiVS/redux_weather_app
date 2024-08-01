@@ -1,4 +1,4 @@
-import { useAppDispatch} from "store/hooks"
+import { useAppDispatch } from "store/hooks"
 import Button from "components/Button/Button"
 import { weatherAction } from "store/redux/weatherApp/weatherAppSlice"
 
