@@ -42,18 +42,20 @@ export const weatherAppSlice = createAppSlice({
             city: city,
           }
         },
-        rejected: (state: WeatherAppSliceState, action) => {
-          state.error = action.error.message
+        rejected: (state: WeatherAppSliceState, action: PayloadAction<any>) => {
+          state.error = action.payload.data.message
           state.isPending = false
         },
       },
     ),
+
     saveWeatherCard: create.reducer(
       (state: WeatherAppSliceState, action: PayloadAction<WeatherObject>) => {
         state.weather = [...state.weather, action.payload]
         state.currentWeatherData = undefined
       },
     ),
+
     deleteWeatherCard: create.reducer(
       (state: WeatherAppSliceState, action: PayloadAction<string>) => {
         state.currentWeatherData = undefined

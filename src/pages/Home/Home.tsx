@@ -15,7 +15,7 @@ function Home() {
   )
 
   const [isModalOpen, setModalOpen] = useState<boolean>(false)
-  const [errorMessage, setErrorMessage] = useState("")
+  const [errorMessage, setErrorMessage] = useState<string>("")
 
   useEffect(() => {
     if (error) {
