@@ -26,6 +26,7 @@ export const weatherAppSlice = createAppSlice({
       },
       {
         pending: (state: WeatherAppSliceState) => {
+          state.currentWeatherData = undefined
           state.error = undefined
           state.isPending = true
         },
@@ -42,8 +43,10 @@ export const weatherAppSlice = createAppSlice({
             city: city,
           }
         },
-        rejected: (state: WeatherAppSliceState, action: PayloadAction<any>) => {
-          state.error = action.payload.data.message
+        rejected: (state: WeatherAppSliceState, action: any) => {
+          state.currentWeatherData = undefined
+          state.error = action.error.message
+
           state.isPending = false
         },
       },
