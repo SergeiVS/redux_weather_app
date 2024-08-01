@@ -1,12 +1,10 @@
 import { useAppDispatch, useAppSelector } from "store/hooks"
 import Button from "components/Button/Button"
-import {
-  weatherAction,
-  weatherSelectors,
-} from "store/redux/weatherApp/weatherAppSlice"
+import { weatherAction } from "store/redux/weatherApp/weatherAppSlice"
 
 import {
   ButtonsContainer,
+  ButtonWrapper,
   City,
   Degrees,
   ResponseContainer,
@@ -15,7 +13,6 @@ import {
   WeatherPicture,
 } from "./styles"
 import { WeatherDataProps } from "./types"
-
 
 function WeatherCard(weatherData: WeatherDataProps) {
   const dispatch = useAppDispatch()
@@ -31,7 +28,6 @@ function WeatherCard(weatherData: WeatherDataProps) {
   const onDelete = () => {
     dispatch(weatherAction.deleteWeatherCard(weatherData.weatherData.id))
     setTimeout(() => alert("Weather card was deleted"), 500)
-    
   }
 
   const URL_PICTURE = `http://openweathermap.org/img/w/${weatherData.weatherData.iconCode}.png`
@@ -47,9 +43,13 @@ function WeatherCard(weatherData: WeatherDataProps) {
       </ResponseContainer>
       <ButtonsContainer>
         {!weatherData.isSaved && (
-          <Button name="Save" isTransparent onClick={onSave} />
+          <ButtonWrapper>
+            <Button name="Save" isTransparent onClick={onSave} />
+          </ButtonWrapper>
         )}
-        <Button name="Delete" isTransparent onClick={onDelete} />
+        <ButtonWrapper>
+          <Button name="Delete" isTransparent onClick={onDelete} />
+        </ButtonWrapper>
       </ButtonsContainer>
     </WeatherCardContainer>
   )

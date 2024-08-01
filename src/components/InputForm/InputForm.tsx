@@ -20,11 +20,10 @@ function InputForm() {
   const formik = useFormik({
     initialValues: { [FormNames.CITY]: "" },
     validationSchema: validationSchema,
-    validateOnMount: true,
     validateOnChange: false,
     onSubmit: (values, helpers) => {
       dispatch(weatherAction.getWeather(values[FormNames.CITY]))
-      helpers.resetForm
+      helpers.resetForm()
     },
   })
 
