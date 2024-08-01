@@ -14,7 +14,6 @@ import { weatherSelectors } from "store/redux/weatherApp/weatherAppSlice"
 
 function InputForm() {
   const dispatch = useAppDispatch()
-  // const [isModalOpen, setModalOpen] = useState<boolean>(false)
 
   const validationSchema = Yup.object().shape({
     [FormNames.CITY]: Yup.string().required("City name is missing"),
@@ -30,11 +29,6 @@ function InputForm() {
       helpers.resetForm
     },
   })
-  // useEffect(() => {
-  //   if (!formik.dirty) {
-  //     setModalOpen(true)
-  //   }
-  // }, [formik.handleSubmit])
 
   const { isPending } = useAppSelector(weatherSelectors.weatherState)
 
@@ -50,9 +44,6 @@ function InputForm() {
       <ButtonContainer>
         <Button name="Search" type="submit" disabled={isPending} />
       </ButtonContainer>
-      {/* <Modal open={isModalOpen} onClose={() => setModalOpen(false)}>
-        <Alert severity="error">Input can not be empty</Alert>
-      </Modal> */}
     </InputFormContainer>
   )
 }
